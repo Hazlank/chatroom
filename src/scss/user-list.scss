@@ -1,0 +1,23 @@
+@include b(userlist) {
+    margin-top: 15px;
+}
+
+@include b(user) {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    height: 40px;
+    &:hover{
+      background: #F1F1F1
+    }
+    @include e(avatar) {
+        $len: 45px;
+        width: $len;
+        height: $len;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}

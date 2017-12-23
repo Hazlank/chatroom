@@ -1,0 +1,16 @@
+@include b(message) {
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    width: calc(100% - 261px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include b(message-textarea){
+      display: flex;
+      textarea{
+        height: 27px;
+        width: 1606px;
+        outline: none;
+      }
+    }
+}

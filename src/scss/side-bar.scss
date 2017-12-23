@@ -1,0 +1,26 @@
+@include b(main){
+    height: calc(100vh - 20px);
+    display: flex;
+    @include b(sidebar) {
+        width: 260px;
+        padding: 12px 0;
+        @include b(sidebar-tools) {
+            float: left
+        }
+        & i {
+            padding: 2px 15px;
+            font-size: 20px;
+            color: #999;
+            display: inline-block;
+            cursor: pointer;
+        }
+        @include b(search-input){
+            width: 174px;
+            height: 19px;
+            font-size: 12px;
+            padding: 2px 8px;
+        }
+    
+    }  
+}
+

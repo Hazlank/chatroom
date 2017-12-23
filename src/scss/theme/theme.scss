@@ -1,0 +1,32 @@
+@import 'dark.scss',
+        'light.scss';
+
+
+
+$themes: (
+  dark: (
+        basic-font-color: $dark-basic-font-color,
+        basic-background-color:$dark-basic-background-color,
+        placeholder-color:$dark-placeholder-color,
+        header-background:$dark-header-background,
+        font-color:$dark-font-color,
+        background-color:$dark-background-color
+    ),
+  light: (
+        basic-font-color: $light-basic-font-color,
+        basic-background-color:$light-basic-background-color,
+        placeholder-color:$light-placeholder-color, 
+        header-background:$light-header-background,
+        font-color: $light-font-color,
+        background-color:$light-background-color
+    ),
+);
+
+
+@each $theme, $map in $themes {
+  .#{$theme} {
+    @include b(header) {
+      background: map-get($map, header-background);
+  }
+  }
+}

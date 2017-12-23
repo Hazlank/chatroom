@@ -1,0 +1,16 @@
+@import 
+  "minix/bem",
+  "common/var",
+  "theme/theme";
+
+@import "header",
+        "side-bar",
+        "message",
+        "user-list";
+
+
+        
+body{
+  height: 100vh;
+  padding: 1px;
+}
