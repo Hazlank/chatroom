@@ -4,13 +4,16 @@
   "theme/theme";
 
 @import "header",
-        "side-bar",
         "message",
-        "user-list";
+        "user-list",
+        "side-list";
 
 
         
 body{
   height: 100vh;
-  padding: 1px;
+}
+
+.iconfont{
+  cursor: pointer;
 }

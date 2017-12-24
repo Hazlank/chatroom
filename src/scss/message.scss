@@ -5,12 +5,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
+    padding-bottom: 50px;
     @include b(message-textarea){
+      position: fixed;
+      bottom: 0;
+      background: white;
       display: flex;
       textarea{
         height: 27px;
-        width: 1606px;
+        width: 1560px;
         outline: none;
       }
+    }
+    .icon-huixingzhen{
+      font-size: 30px;
+      transform: rotate(180deg);
+      display: inline-block;
     }
 }

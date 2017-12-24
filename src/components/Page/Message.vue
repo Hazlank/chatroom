@@ -1,7 +1,7 @@
 <template>
   <div class="tg-message" :style="{'background-image':background}">
     <!-- <div class="tg-message-header">
-    </div> -->
+      </div> -->
     <div class="tg-message-content">
       <div v-for="(content,keys) in content" :key="keys">
         {{content.context}}
@@ -10,14 +10,16 @@
       </div>
     </div>
     <div class="tg-message-textarea">
-      <a href=""><button></button></a>
+      <span href=""><i class="iconfont icon-huixingzhen"></i></span>
       <textarea v-model="context" @keyup.enter='send'></textarea>
       <div class="">
-        <a href=""><button></button></a><a href=""><button></button></a>
+        <span href=""><i class="iconfont icon-huixingzhen"></i></span><span href=""><button></button></span>
       </div>
     </div>
   </div>
 </template>
+
+
 
 <script>
   import wife from '@/assets/wife.jpg'

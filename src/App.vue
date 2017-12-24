@@ -3,6 +3,7 @@
     <header is='headerCompontent'></header>
     <div class="tg-main">
       <side-bar></side-bar>
+      <side-list></side-list>
       <message-content></message-content>
     </div>
   </div>
@@ -10,6 +11,7 @@
 
 <script>
   import Header from '@Page/Header'
+  import SideList from '@Page/SideList'
   import SideBar from '@Page/SideBar'
   import Message from '@Page/Message'
   export default {
@@ -22,6 +24,7 @@
     components: {
       HeaderCompontent: Header,
       MessageContent: Message,
+      SideList,
       SideBar,
     }
   };
