@@ -1,4 +1,18 @@
 <template>
-  <div>
+  <div class="tg-wrapper" v-if="wrapper()" @click='bardisply'>
   </div>
 </template>
+
+<script>
+import { mapGetters, mapActions } from 'vuex'
+export default {
+  data () {
+    return {
+      ...mapGetters(['wrapper'])
+    }
+  },
+  methods: {
+    ...mapActions(['bardisply'])
+  }
+}
+</script>

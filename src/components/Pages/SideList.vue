@@ -1,8 +1,8 @@
 <template>
   <div class="tg-sidebar">
     <div class="tg-sidebar__header">
-      <div class="tg-sidebar-tools">
-        <i class="icon-caidan01 iconfont"></i>
+      <div class="tg-sidebar-tools" @click="bardisply">
+        <i class="icon-caidan01 iconfont">dwdw</i>
       </div>
       <div class="tg-sidebar-search">
         <div class="tg-sidebar-search__input">
@@ -17,8 +17,12 @@
 </template>
 
 <script>
-  import userList from '@Page/userList.vue'
+  import userList from 'Pages/UserList'
+  import { mapActions } from 'vuex'
   export default {
+    methods: {
+      ...mapActions(['bardisply'])
+    },
     components: {
       userList
     }

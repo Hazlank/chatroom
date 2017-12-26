@@ -6,9 +6,8 @@
     display: flex;
     cursor: pointer;
     padding: 10px;
-    height: 40px;
-    &:hover{
-      background: #F1F1F1
+    &:hover {
+        background: #F1F1F1
     }
     @include e(avatar) {
         $len: 45px;
@@ -19,5 +18,8 @@
         img {
             width: 100%;
         }
+    }
+    @include e(block) {
+        margin-left: 12px;
     }
 }

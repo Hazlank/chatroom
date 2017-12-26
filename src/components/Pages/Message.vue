@@ -10,10 +10,17 @@
       </div>
     </div>
     <div class="tg-message-textarea">
-      <span href=""><i class="iconfont icon-huixingzhen"></i></span>
-      <textarea v-model="context" @keyup.enter='send'></textarea>
+      <span>
+        <i class="iconfont icon-huixingzhen"></i>
+      </span>
+      <textarea v-model="context" @keyup.ctrl.enter='send'></textarea>
       <div class="">
-        <span href=""><i class="iconfont icon-huixingzhen"></i></span><span href=""><button></button></span>
+        <span>
+          <i class="iconfont icon-huixingzhen"></i>
+        </span>
+        <span>
+          <button></button>
+        </span>
       </div>
     </div>
   </div>
@@ -22,25 +29,24 @@
 
 
 <script>
-  import wife from '@/assets/wife.jpg'
   export default {
-    data() {
+    data () {
       return {
-        background: 'url(/static/img/wife.e7aeb7f.jpg)',
+        background: 'url(/static/img/wife.jpg)',
         content: [],
-        context: '',
+        context: ''
       }
     },
     methods: {
-      send() {
+      send () {
         this.content.push({
           context: this.context
         })
-        this.context = '';
+        this.context = ''
       }
     },
     computed: {
-      messageImg() {
+      messageImg () {
         return this.background
       }
     }

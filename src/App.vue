@@ -2,21 +2,25 @@
   <div :class="theme">
     <header is='headerCompontent'></header>
     <div class="tg-main">
-      <side-bar></side-bar>
       <side-list></side-list>
       <message-content></message-content>
+    </div>
+    <div class="tg-container">
+      <Wrapper></Wrapper>
+      <side-bar></side-bar>
     </div>
   </div>
 </template>
 
 <script>
-  import Header from '@Page/Header'
-  import SideList from '@Page/SideList'
-  import SideBar from '@Page/SideBar'
-  import Message from '@Page/Message'
+  import Header from 'Pages/Header'
+  import SideList from 'Pages/SideList'
+  import SideBar from 'Pages/SideBar'
+  import Message from 'Pages/Message'
+  import Wrapper from 'Public/Wrapper'
   export default {
     name: 'app',
-    data() {
+    data () {
       return {
         theme: 'light'
       }
@@ -26,8 +30,9 @@
       MessageContent: Message,
       SideList,
       SideBar,
+      Wrapper
     }
-  };
+  }
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 'use strict'
-// Template version: 1.2.4
+// Template version: 1.2.7
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
@@ -23,7 +23,7 @@ module.exports = {
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
-    useEslint: false,
+    useEslint: true,
     // If true, eslint errors and warnings will also be shown in the error overlay
     // in the browser.
     showEslintErrorsInOverlay: false,

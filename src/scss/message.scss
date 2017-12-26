@@ -1,5 +1,6 @@
 @include b(message) {
-    background-size: 100% 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     width: calc(100% - 261px);
     display: flex;
@@ -7,20 +8,22 @@
     justify-content: space-between;
     overflow-y: scroll;
     padding-bottom: 50px;
-    @include b(message-textarea){
-      position: fixed;
-      bottom: 0;
-      background: white;
-      display: flex;
-      textarea{
-        height: 27px;
-        width: 1560px;
-        outline: none;
-      }
+    @include b(message-textarea) {
+        position: fixed;
+        bottom: 0;
+        background: white;
+        display: flex;
+        right: 0;
+        left: 260px;
+        textarea {
+            height: 27px;
+            flex: 1;
+            outline: none;
+        }
     }
-    .icon-huixingzhen{
-      font-size: 30px;
-      transform: rotate(180deg);
-      display: inline-block;
+    .icon-huixingzhen {
+        font-size: 30px;
+        transform: rotate(180deg);
+        display: inline-block;
     }
 }

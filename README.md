@@ -1,4 +1,4 @@
-# chratroom
+# chartroom
 
 > A Vue.js project
 
