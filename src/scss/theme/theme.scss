@@ -10,7 +10,8 @@ $themes: (
         placeholder-color:$dark-placeholder-color,
         header-background:$dark-header-background,
         font-color:$dark-font-color,
-        background-color:$dark-background-color
+        sidebar-background-color:$dark-sidebar-background-color
+        sidebar-button-background: $dark-sidebar-button-background
     ),
   light: (
         basic-font-color: $light-basic-font-color,
@@ -18,15 +19,29 @@ $themes: (
         placeholder-color:$light-placeholder-color, 
         header-background:$light-header-background,
         font-color: $light-font-color,
-        background-color:$light-background-color
+        sidebar-background-color: $light-sidebar-background-color
+        sidebar-button-background: $light-sidebar-button-background
     ),
 );
 
 
 @each $theme, $map in $themes {
   .#{$theme} {
+    // 头部颜色
     @include b(header) {
       background: map-get($map, header-background);
-  }
+    }        
+    //侧栏信息背景颜色           
+    @include b(sidebar){
+     &__infor{
+        background: map-get($map, sidebar-background-color);
+      }
+    }
+    .t-light {
+      background: map-get($map, sidebar-background-color);
+    }
+    .t-dark {
+      background: map-get($map, sidebar-button-background);
+    }
   }
 }
