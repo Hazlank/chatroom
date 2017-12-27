@@ -1,20 +1,11 @@
-@include b(container){
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 20px;
-    height:calc(100% - 20px);
-    width:100%;
-}
-
 @include b(wrapper) {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-    bg:black;
+    top: 20px;
+    background:black;
     opacity: 0.5;
-    height:100%;
+    height: calc(100% - 20px);
     width:100%;
     transition: opacity .2s ease-out;
 }

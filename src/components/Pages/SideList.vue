@@ -1,11 +1,11 @@
 <template>
-  <div class="tg-sidebar">
-    <div class="tg-sidebar__header">
-      <div class="tg-sidebar-tools" @click="bardisply">
-        <i class="icon-caidan01 iconfont">dwdw</i>
+  <div class="tg-sidelist">
+    <div class="tg-sidelist__header">
+      <div class="tg-sidelist-tools" @click="bardisply">
+        <i class="icon-caidan01 iconfont"></i>
       </div>
-      <div class="tg-sidebar-search">
-        <div class="tg-sidebar-search__input">
+      <div class="tg-sidelist-search">
+        <div class="tg-sidelist-search__input">
           <input type="text" placeholder="Search" class="tg-search-input">
         </div>
       </div>

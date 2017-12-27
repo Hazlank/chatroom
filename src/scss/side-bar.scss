@@ -1,8 +1,96 @@
-@include b(side-bar){
-  width: 300px;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.2s;
-  background: white;
+@include b(side-bar) {
+    width: 270px;
+    position: absolute;
+    top: 20px;
+    transition: all 0.23s;
+    background: white;
+    height: calc(100% - 20px);
+    @include b(sidebar) {
+        @include e(infor) {
+            height: 95px;
+            padding: 19px;
+        }
+        @include e(avatar) {
+            $len: 48px;
+            width: $len;
+            height: $len;
+            border-radius: 53px;
+            overflow: hidden;
+            img {
+                width: 130%;
+                height: 100%;
+                transform: translateX(-7px);
+            }
+        }
+        @include e(item) {
+            margin-top: 15px;
+            & i{
+                padding: 9px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: 700;
+                right: -90px;
+                background: #2785BF;
+                cursor: pointer;
+                position: relative;
+                top: -10px;
+            }
+        }
+        @include e(bookmark){
+            
+        }
+        span {
+            margin-top: 5px;
+            display: block;
+            color: white;
+            font-size: 13px
+        }
+
+        @include b(sidebar-toolsList){
+            list-style: none;
+            padding: 0;
+            @include e(memu){
+                padding: 12px 22px;
+                & a{
+                    text-decoration: none;
+                    color: black;
+                    margin-left: 15px;
+                    cursor: default;
+                }
+                &:hover{
+                    background: #F1F1F1;
+                }
+            }
+            & i{
+                color: #999;
+                font-size: 19px;
+            }
+        }
+    }
+    .theme-button{
+        $width: 35px;
+        display: inline-block;
+        width: $width;
+        height: 20px;
+        position: absolute;
+        right: 48px;
+        .theme-button__container{
+            width: $width*2;
+            height: 100%;
+        }
+        a{
+            display: inline-block;
+        }
+        .t-light{
+            width: $width;
+            height: 100%;
+            margin-left: 0;
+        }
+        .t-dark{
+            width: $width;
+            height: 100%;
+            margin-left: 0;
+            position: absolute;
+        }
+    }
 }
