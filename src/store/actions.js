@@ -5,6 +5,9 @@ const actions = {
   },
   wrapperdisply ({ commit }) {
     commit('wrapperdisply')
+  },
+  themechange ({ commit }) {
+    commit('themechange')
   }
 }
 

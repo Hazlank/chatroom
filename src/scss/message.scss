@@ -8,6 +8,11 @@
     justify-content: space-between;
     overflow-y: scroll;
     padding-bottom: 50px;
+    @include e(emoji) {
+        i {
+            font-size: 30px
+        }
+    }
     @include b(message-textarea) {
         position: fixed;
         bottom: 0;
@@ -15,11 +20,13 @@
         display: flex;
         right: 0;
         left: 260px;
-        textarea {
-            height: 27px;
-            flex: 1;
-            outline: none;
-        }
+    }
+    @include b(textarea) {
+        height: 27px;
+        flex: 1;
+        border: none;
+        resize: none;
+        outline: none;
     }
     .icon-huixingzhen {
         font-size: 30px;

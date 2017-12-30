@@ -1,4 +1,7 @@
 const getters = {
+  theme: state => {
+    return state.theme
+  },
   barPosition: state => {
     return state.barPosition
   },

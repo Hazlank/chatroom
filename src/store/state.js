@@ -1,5 +1,6 @@
 const state = {
-  barPosition: 'translateX(-300px)',
-  wrapper: false
+  theme: 'light',
+  barPosition: 'translateX(-270px)',
+  wrapper: !true
 }
 export default state

@@ -2,7 +2,7 @@
 
 //基本文字颜色
 $dark-basic-font-color:#FFFFFF;
-//基本背景颜色             
+//基本背景颜色(侧栏菜单、用户列表等)        
 $dark-basic-background-color:#282E33;
 
 //提示字体颜色
@@ -12,10 +12,19 @@ $dark-placeholder-color:#ccc;
 $dark-header-background:#3A4047;
 //字体颜色
 $dark-font-color:#3FC1B0;
-//背景颜色
-$dark-sidebar-background-color:#009687;
 
+//------------------侧栏菜单--------------------//
+//侧栏头部信息背景颜色
+$dark-sidebar-information-background:#009687;
 //侧栏主题切换按钮颜色
-$dark-sidebar-button-background: white;
+$dark-sidebar-button-background: fff;
+//侧栏书签背景颜色
+$dark-sidebar-bookmark-background: #0E837F;
+//侧栏菜单hover
+$dark-sidebar-memu-background:  #313B43;
+
+//------------------侧栏用户--------------------//
+//侧栏用户列表按钮背景颜色
+$dark-sidelist-button-background: #3D444B;
 
 
