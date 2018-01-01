@@ -12,7 +12,7 @@
       <span>
             <i class="iconfont icon-huixingzhen"></i>
           </span>
-      <div class="tg-editor" ref='edit' @focusout="edit" @keyup.ctrl.enter='send' contenteditable="true" v-html="context">
+      <div class="tg-editor" ref='edit'  @keyup.ctrl.enter='send' contenteditable="true">
       </div>
       <div class="tg-message__emoji">
         <span>
@@ -40,13 +40,10 @@
     },
     methods: {
       send () {
-        this.$refs['edit'].blur()
         this.content.push({
-          context: this.context
+          context: this.$refs['edit'].innerHTML
         })
-        this.context = ''
         this.$refs['edit'].innerHTML = ''
-        this.$refs['edit'].focus()
       },
       edit (e) {
         this.context = e.target.innerHTML
