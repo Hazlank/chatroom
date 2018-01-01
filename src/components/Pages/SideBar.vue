@@ -11,14 +11,18 @@
         </div>
       </div>
       <ul class="tg-sidebar-toolsList">
-        <li class="tg-sidebar-toolsList__memu" v-for="(data, index) in memus" :key="index">
+        <li class="tg-sidebar-toolsList__memu" v-for="(data, index) in memus" :key="index" @click="stopPropagation(index,$event)">
           <i class="iconfont" :class="data.icon"></i>
           <a>{{data.context}}</a>
-          <div class="theme-button" v-if="data.icon === 'icon-yueliang'">
-              <div class="theme-button__container">
+          <div class="theme-buttonContain"  v-if="data.icon === 'icon-yueliang'">
+            <div class="theme-button">
+              <div class="theme-button__container button-position">
                 <a class="t-light"></a>
                 <a class="t-dark"></a>
               </div>
+            </div>
+            <a class="theme-change">
+            </a>
           </div>
         </li>
       </ul>
@@ -40,7 +44,7 @@
         },
         memus: [{
           context: 'New Group',
-          icon: 'icon-qun'
+          icon: 'icon-qunliao'
         }, {
           context: 'New Channel',
           icon: 'icon-guangbo'
@@ -61,9 +65,13 @@
       }
     },
     methods: {
-      ...mapActions(['bardisply']),
-      stopPropagation (e) {
-        e.stopPropagation()
+      ...mapActions(['bardisply', 'themechange']),
+      stopPropagation (index, e) {
+        if (index === 5) {
+          e.stopPropagation()
+          this.themechange()
+          this.ButtonType = this.ButtonType === 'button-light' ? 'button-dark' : 'button-light'
+        }
       }
     },
     filters: {

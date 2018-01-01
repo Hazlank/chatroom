@@ -9,6 +9,7 @@
     overflow-y: scroll;
     padding-bottom: 50px;
     @include e(emoji) {
+        display: flex;
         i {
             font-size: 30px
         }
@@ -20,13 +21,27 @@
         display: flex;
         right: 0;
         left: 260px;
-    }
-    @include b(textarea) {
-        height: 27px;
-        flex: 1;
-        border: none;
-        resize: none;
-        outline: none;
+        span{
+            display: flex;
+            i{
+                padding: 10px;
+                align-self: flex-end;
+            }
+        }
+        @include b(editor) {
+            margin-top: 17px;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            border: none;
+            resize: none;
+            outline: none;
+            min-height: 24px;
+            max-height: 270px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            line-height: 22px;
+          }
     }
     .icon-huixingzhen {
         font-size: 30px;

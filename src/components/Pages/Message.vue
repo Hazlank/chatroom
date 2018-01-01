@@ -1,26 +1,26 @@
 <template>
   <div class="tg-message" :style="{'background-image':background}">
     <!-- <div class="tg-message-header">
-      </div> -->
+          </div> -->
     <div class="tg-message-content">
-      <div v-for="(content,keys) in content" :key="keys">
-        {{content.context}}
+      <div v-for="(content,keys) in content" :key="keys" v-html="content.context">
       </div>
       <div class="tg-message-placeholder">
       </div>
     </div>
     <div class="tg-message-textarea">
       <span>
-        <i class="iconfont icon-huixingzhen"></i>
-      </span>
-      <textarea v-model="context" @keyup.ctrl.enter='send'></textarea>
-      <div class="">
+            <i class="iconfont icon-huixingzhen"></i>
+          </span>
+      <div class="tg-editor" ref='edit' @focusout="edit" @keyup.ctrl.enter='send' contenteditable="true" v-html="context">
+      </div>
+      <div class="tg-message__emoji">
         <span>
-          <i class="iconfont icon-huixingzhen"></i>
-        </span>
+              <i class="iconfont icon-xiaolian"></i>
+            </span>
         <span>
-          <button></button>
-        </span>
+               <i class="iconfont icon-yuyin"></i> 
+            </span>
       </div>
     </div>
   </div>
@@ -34,15 +34,22 @@
       return {
         background: 'url(/static/img/wife.jpg)',
         content: [],
-        context: ''
+        context: '',
+        isLocked: false
       }
     },
     methods: {
       send () {
+        this.$refs['edit'].blur()
         this.content.push({
           context: this.context
         })
         this.context = ''
+        this.$refs['edit'].innerHTML = ''
+        this.$refs['edit'].focus()
+      },
+      edit (e) {
+        this.context = e.target.innerHTML
       }
     },
     computed: {

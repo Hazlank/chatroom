@@ -10,7 +10,7 @@
         "side-bar",
         "wrapper",
         "box";
-
+  
 
         
 body{
@@ -19,4 +19,8 @@ body{
 
 .iconfont{
   cursor: pointer;
+}
+
+::-webkit-scrollbar{
+  opacity: 0;
 }
