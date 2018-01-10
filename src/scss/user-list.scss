@@ -1,11 +1,15 @@
 @include b(userlist) {
-    margin-top: 15px;
+    margin-top: 45px;
 }
 
 @include b(user) {
     display: flex;
     cursor: pointer;
     padding: 10px;
+    font-size: 14px;
+    @include e(block){
+        margin-left: 8px;
+    }
     @include e(avatar) {
         $len: 45px;
         width: $len;
@@ -16,7 +20,33 @@
             width: 100%;
         }
     }
-    @include e(block) {
+    @include b(block) {
         margin-left: 12px;
+        @include e(contextcount){
+            padding: 3px 7px;
+            background: #BBBBBB;
+            border-radius: 13px;
+        }
+        @include e(header){
+            display: flex;
+            margin-top: 4px; 
+        }
+        @include e(time){
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @include e(footer){
+            margin-top: 4px; 
+        }
+    }
+}
+
+.font-c{
+    .tg-block__context{
+        color: #ccc
+    }
+    .tg-block__time{
+        color: #ccc
     }
 }

@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
-    padding-bottom: 50px;
     @include e(emoji) {
         display: flex;
         i {
@@ -15,21 +14,17 @@
         }
     }
     @include b(message-textarea) {
-        position: fixed;
-        bottom: 0;
-        background: white;
         display: flex;
-        right: 0;
-        left: 260px;
         span{
             display: flex;
             i{
                 padding: 10px;
                 align-self: flex-end;
+                color: gray
             }
         }
         @include b(editor) {
-            margin-top: 17px;
+            margin-top: 16px;
             -webkit-box-flex: 1;
             -ms-flex: 1;
             flex: 1;
@@ -42,6 +37,50 @@
             margin-bottom: 10px;
             line-height: 22px;
           }
+    }
+    @include b(message-content){
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 10px;
+        &__speakerMe,&__speakerOthers{
+            align-items: flex-end;
+            display: flex;
+            font-size: 14px;
+        }
+        @include e(speakerMe){
+            justify-content: flex-end;
+        }
+        @include e(avatar){
+            $len: 35px;
+            width: $len;
+            height: $len;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 0 10px;
+            margin-bottom: 9px;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @include b(message-container){
+        padding: 7px 13px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        border-radius: 6px;
+        @include e(side){
+            font-size: 12px;
+            color: #6CC264;
+            line-height: 0px;
+            margin-bottom: 7px;
+            float: right;
+        }
+        @include e(text){
+            margin-right: 34px;
+        }
     }
     .icon-huixingzhen {
         font-size: 30px;

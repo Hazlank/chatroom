@@ -7,6 +7,9 @@ const mutations = {
   },
   themechange: state => {
     state.theme = state.theme === 'dark' ? 'light' : 'dark'
+  },
+  userNumChange: (state, num) => {
+    state.userNum = num
   }
 }
 

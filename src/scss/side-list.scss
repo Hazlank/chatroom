@@ -3,9 +3,19 @@
     display: flex;
     @include b(sidelist) {
         width: 260px;
-        padding: 12px 0;
+        overflow: auto;
+        position: relative;
+        @include e(header){
+            position: fixed;
+            width: 260px;
+            background: white;
+            padding-top: 10px;
+        }
         @include b(sidelist-tools) {
-            float: left
+            display: inline-block;
+        }
+        @include b(sidelist-search) {
+            display: inline-block;
         }
         & i {
             padding: 2px 15px;

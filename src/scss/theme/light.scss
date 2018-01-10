@@ -6,7 +6,7 @@ $light-basic-font-color: #000;
 $light-basic-background-color: #fff;
 
 //提示字体颜色
-$light-placeholder-color:#ccc;
+$light-gray-color:#ccc;
 
 //头部背景颜色
 $light-header-background:#F1F1F1;
@@ -26,6 +26,12 @@ $light-sidebar-memu-background: #F1F1F1;
 //------------------侧栏用户--------------------//
 //侧栏用户列表按钮背景颜色
 $light-sidelist-button-background: #F1F1F1;
+//侧栏右侧border
+$light-sidelist-border: 1px solid #E7E7E7;
 // //侧栏用户列表按钮hover背景颜色
 // $light-sidelist-button-background: #F1F1F1;
+
+//------------------聊天界面--------------------//
+//聊天框背景颜色
+$light-message-background: #EFFDDE;
  

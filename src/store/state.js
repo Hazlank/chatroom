@@ -1,6 +1,7 @@
 const state = {
   theme: 'light',
   barPosition: 'translateX(-270px)',
-  wrapper: !true
+  wrapper: false,
+  userNum: ''
 }
 export default state

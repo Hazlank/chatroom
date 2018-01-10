@@ -8,6 +8,9 @@ const actions = {
   },
   themechange ({ commit }) {
     commit('themechange')
+  },
+  userNumChange ({ commit, num }) {
+    commit('themechange', num)
   }
 }
 

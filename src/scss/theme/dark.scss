@@ -6,7 +6,7 @@ $dark-basic-font-color:#FFFFFF;
 $dark-basic-background-color:#282E33;
 
 //提示字体颜色
-$dark-placeholder-color:#ccc;
+$dark-gray-color:#ccc;
 
 //头部背景颜色
 $dark-header-background:#3A4047;
@@ -26,5 +26,9 @@ $dark-sidebar-memu-background:  #313B43;
 //------------------侧栏用户--------------------//
 //侧栏用户列表按钮背景颜色
 $dark-sidelist-button-background: #3D444B;
+//侧栏右侧border
+$dark-sidelist-border: 1px solid #242A2E;
 
-
+//------------------聊天界面--------------------//
+//聊天框背景颜色
+$dark-message-background: #33393F;

@@ -7,79 +7,122 @@ $themes: (
   dark: (
         basic-font-color: $dark-basic-font-color,
         basic-background-color:$dark-basic-background-color,
-        placeholder-color:$dark-placeholder-color,
         header-background:$dark-header-background,
         font-color:$dark-font-color,
         sidebar-information-background:$dark-sidebar-information-background,
         sidebar-button-background: $dark-sidebar-button-background,
         sidebar-memu-background: $dark-sidebar-memu-background,
         sidebar-bookmark: $dark-sidebar-bookmark-background,
+        sidelist-border: $dark-sidelist-border,
         sidelist-button-background: $dark-sidelist-button-background
     ),
   light: (
         basic-font-color: $light-basic-font-color,
         basic-background-color:$light-basic-background-color,
-        placeholder-color:$light-placeholder-color, 
         header-background:$light-header-background,
         font-color: $light-font-color,
         sidebar-information-background: $light-sidebar-information-background,
         sidebar-button-background: $light-sidebar-button-background,
         sidebar-memu-background: $light-sidebar-memu-background,
         sidebar-bookmark: $light-sidebar-bookmark-background,
+        sidelist-border: $light-sidelist-border,
         sidelist-button-background: $light-sidelist-button-background
     ),
 );
 
+//字体基本样式
+$basic-font-color:
+  sidebar-toolsList__memu,
+  user,
+  search-input,
+  message-container,
+  message-textarea;
+
+//
+$basic-background-color:
+  side-bar,
+  sidelist,
+  sidelist__header,
+  message-textarea;
+
 
 @each $theme, $map in $themes {
   .#{$theme} {
-    // 头部颜色
+
+    //header
     @include b(header) {
+      //头部颜色
       background: map-get($map, header-background);
     }        
 
-    //侧栏           
+    //sidebar           
     @include b(sidebar){
     //侧栏信息背景颜色 
      &__infor{
         background: map-get($map, sidebar-information-background);
       }
     //侧栏书签icon背景颜色 
-     &__phone{
-      i{
+     &__phone i{
         background: map-get($map, sidebar-bookmark);
-      }
      }
     }
-    //侧栏菜单列表背景颜色 
-    @include b(side-bar) {
-      background: map-get($map, basic-background-color);
-    }
     //侧栏菜单列表hover背景颜色,字体颜色
-    @include b(sidebar-toolsList){
-      &__memu{
-        color:  map-get($map, basic-font-color);
+    @include b(sidebar-toolsList__memu){
         &:hover{
           background: map-get($map, sidebar-memu-background);
         }
-      }
     }
-    //侧栏用户列表背景颜色
+
+
+
+    //sidelist
     @include b(sidelist){
-      background: map-get($map, basic-background-color);
+      //侧栏右侧border
+      border: map-get($map, sidelist-border);
+    }
+
+     //userlist
+     @include b(userlist){
+      .active{
+        color: white!important;
+        background: map-get($map, sidebar-information-background);
+      }
     }
     //侧栏用户列表hover背景颜色,字体颜色
-    @include b(user){
-      color:  map-get($map, basic-font-color);
-      &:hover{
-        background: map-get($map, sidebar-memu-background);
-      }
-    }
-        //侧栏用户列表按钮背景颜色
-        @include b(search-input){
-          background: map-get($map, sidelist-button-background);
-          color: map-get($map, basic-font-color);
+      .font-c{
+        &:hover{
+          background: map-get($map, sidebar-memu-background);
         }
+        .tg-block__talkname{
+          color: map-get($map, font-color);
+        }
+      }
+    //侧栏用户列表按钮背景颜色
+    @include b(search-input){
+      background: map-get($map, sidelist-button-background);
+    }
+
+   
+   //重复样式
+   //
+  #{$theme}-basic-font-color{
+    color: map-get($map, basic-font-color);
+  }
+  #{$theme}-basic-background-color{
+    background:  map-get($map, basic-background-color);
+  }
+
+   @each $ele in $basic-font-color{
+      @include b($ele){
+       @extend #{$theme}-basic-font-color;
+      }
+   }
+
+   @each $ele in $basic-background-color{
+    @include b($ele){
+      @extend #{$theme}-basic-background-color;
+    }
+ }
   }
 }
 
@@ -96,11 +139,23 @@ $themes: (
   .button-position{
     transform: translateX(-35px)
   }
-  .tg-search-input{
+  @include b(search-input){
     outline: none;
   }
 
+  @include b(message-content){
+    &__speakerMe, &__speakerOthers{
+      @include b(message-container){
+        background: #33393F;
+      }
+    }
+  }
+
+  .tg-icon:hover i{
+    color: white !important;
+  }
 }
+
 .light{
   .t-light {
     background: gray;
@@ -114,10 +169,24 @@ $themes: (
     transform: translateX(0);
     border-color: $dark-sidebar-information-background !important;
   }
-  .tg-search-input{
+  @include b(search-input){
     transition: background 0.26s;
     &:focus{
       background: #fff;
+    }
+  }
+  
+  @include b(message-content){
+    &__speakerMe{      
+      @include b(message-container){
+        background: #EFFDDE;
+      }
+    }
+    &__speakerOthers{
+      justify-content: left;
+      @include b(message-container){
+        background: $light-basic-background-color;
+      }
     }
   }
 }

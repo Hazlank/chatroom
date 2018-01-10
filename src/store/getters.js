@@ -7,6 +7,9 @@ const getters = {
   },
   wrapper: state => {
     return state.wrapper
+  },
+  userNum: state => {
+    return state.userNum
   }
 }
 

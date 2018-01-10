@@ -11,7 +11,7 @@
         </div>
       </div>
       <ul class="tg-sidebar-toolsList">
-        <li class="tg-sidebar-toolsList__memu" v-for="(data, index) in memus" :key="index" @click="stopPropagation(index,$event)">
+        <li class="tg-sidebar-toolsList__memu tg-icon" v-for="(data, index) in memus" :key="index" @click="stopPropagation(index,$event)">
           <i class="iconfont" :class="data.icon"></i>
           <a>{{data.context}}</a>
           <div class="theme-buttonContain"  v-if="data.icon === 'icon-yueliang'">
