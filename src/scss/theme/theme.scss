@@ -32,18 +32,18 @@ $themes: (
 
 //字体基本样式
 $basic-font-color:
-  sidebar-toolsList__memu,
-  user,
-  search-input,
-  message-container,
-  message-textarea;
+  'sidebar-toolsList__memu',
+  'user',
+  'search-input',
+  'message-container',
+  'message-textarea';
 
 //
 $basic-background-color:
-  side-bar,
-  sidelist,
-  sidelist__header,
-  message-textarea;
+  'side-bar',
+  'sidelist',
+  'sidelist__header',
+  'message-textarea';
 
 
 @each $theme, $map in $themes {
