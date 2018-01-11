@@ -8,8 +8,15 @@ const getters = {
   wrapper: state => {
     return state.wrapper
   },
-  userNum: state => {
-    return state.userNum
+  speekingNum: state => {
+    return state.speekingNum
+  },
+  userList: state => {
+    return state.userList
+  },
+  messagecontent: state => {
+    const list = state.userList
+    return [].concat(list.map((d, _) => d.messagecontent))[state.speekingNum]
   }
 }
 

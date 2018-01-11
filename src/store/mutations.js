@@ -8,8 +8,20 @@ const mutations = {
   themechange: state => {
     state.theme = state.theme === 'dark' ? 'light' : 'dark'
   },
-  userNumChange: (state, num) => {
-    state.userNum = num
+  speekingNumChange: (state, num) => {
+    state.speekingNum = num
+  },
+  updateLocalStorage: state => {
+    localStorage.setItem('messagecontent', JSON.stringify(state.messagecontent))
+  },
+  updateUsertalk: state => {
+    state.userList.forEach((list, index) => {
+      var contentIetm = list.messagecontent
+      list['context'] = contentIetm[contentIetm.length - 1].text
+    })
+  },
+  scrollRemove: (state, e) => {
+    e.parentElement.scrollTop = e.offsetHeight - e.parentElement.offsetHeight
   }
 }
 

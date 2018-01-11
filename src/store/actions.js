@@ -9,8 +9,15 @@ const actions = {
   themechange ({ commit }) {
     commit('themechange')
   },
-  userNumChange ({ commit, num }) {
-    commit('themechange', num)
+  speekingNumChange ({ commit }, num) {
+    commit('speekingNumChange', num)
+  },
+  updateLocalStorage ({ commit }) {
+    commit('updateLocalStorage')
+    commit('updateUsertalk')
+  },
+  scrollRemove ({ commit }, e) {
+    commit('scrollRemove', e)
   }
 }
 
