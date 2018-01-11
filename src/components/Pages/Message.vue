@@ -4,7 +4,7 @@
             </div> -->
     <div style="flex: 1;overflow: auto;"  ref="parent">
           <div class="tg-message-content" ref="children">
-          <div v-for="(content,keys) in content" :key="`content-${keys}`"
+          <div v-for="(content,keys) in messagecontent" :key="`content-${keys}`"
               :class="{'tg-message-content__speakerMe':content.speaker,'tg-message-content__speakerOthers':!content.speaker}">
               <div v-if="!content.speaker" class="tg-message-content__avatar">
                   <img :src="content.avatar" alt="头像">
@@ -41,49 +41,38 @@
 
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
   export default {
     mounted () {
       this.scroll()
     },
     data () {
       return {
-        background: 'url(/static/img/wife.jpg)',
-        content: Array(20).fill(1).map((_, i) =>
-        ({
-          text: i,
-          speaker: true,
-          time: '11:02'
-        })).reverse().concat(
-          Array(6).fill(1).map((_, i) =>
-        ({
-          text: i,
-          speaker: false,
-          avatar: '/static/img/7753609_p0.jpg',
-          time: '11:02'
-        })).reverse()
-        ),
-        text: ''
+        background: 'url(/static/img/wife.jpg)'
       }
     },
     methods: {
       send () {
-        this.content.push({
+        this.messagecontent.push({
           text: this.$refs['edit'].innerHTML,
           speaker: true,
           time: new Date().toTimeString().match(/(\d{2}):\d{2}/g)[0]
         })
         this.$refs['edit'].innerHTML = ''
+        this.updateLocalStorage()
         this.scroll()
       },
       async scroll () {
         await this.$nextTick()
-        this.$refs['parent'].scrollTop = this.$refs['children'].offsetHeight - this.$refs['parent'].offsetHeight
-      }
+        this.scrollRemove(this.$refs['children'])
+      },
+      ...mapActions(['updateLocalStorage', 'scrollRemove'])
     },
     computed: {
       messageImg () {
         return this.background
-      }
+      },
+      ...mapGetters(['messagecontent'])
     }
   }
 </script>
