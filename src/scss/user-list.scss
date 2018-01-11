@@ -9,6 +9,7 @@
     font-size: 14px;
     @include e(block){
         margin-left: 8px;
+        flex: 1;
     }
     @include e(avatar) {
         $len: 45px;
@@ -37,7 +38,17 @@
             justify-content: flex-end;
         }
         @include e(footer){
-            margin-top: 4px; 
+            margin-top: 3px; 
+        }
+        @include e(context){
+            width: 91px;
+            margin-right: 8px;
+            display: inline-block;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: relative;
+            top: 4px;
         }
     }
 }
