@@ -1,6 +1,6 @@
 const mutations = {
   bardisply: state => {
-    state.barPosition = state.barPosition === 'translateX(-270px)' ? 'translateX(0)' : 'translateX(-270px)'
+    state.barPosition = !state.barPosition
   },
   wrapperdisply: state => {
     state.wrapper = !state.wrapper
