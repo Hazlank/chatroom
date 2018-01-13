@@ -6,11 +6,11 @@
       </div>
       <div class="tg-sidelist-search">
         <div class="tg-sidelist-search__input">
-          <input type="text" placeholder="Search" class="tg-search-input">
+           <input type="text" placeholder="Search" class="tg-search-input" v-model="searchUser">
         </div>
       </div>
     </div>
-    <userList>
+    <userList :searchUser='searchUser'>
       <div solt='loading'></div>
     </userList>
   </div>
@@ -20,6 +20,11 @@
   import userList from 'Pages/UserList'
   import { mapActions } from 'vuex'
   export default {
+    data () {
+      return {
+        searchUser: ''
+      }
+    },
     methods: {
       ...mapActions(['bardisply'])
     },
