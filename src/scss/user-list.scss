@@ -50,6 +50,12 @@
             position: relative;
             top: 4px;
         }
+        @include e(talkname){
+            max-width: 70px;
+            width: initial;
+            margin-right: 0;
+            @extend .tg-block__context
+        }
     }
 }
 
