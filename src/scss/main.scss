@@ -24,8 +24,3 @@ body{
 ::-webkit-scrollbar{
   width: 0;
 }
-
-//animation
-.sidebar-enter,.sidebar-leave-active{
-  transform: translateX(-270px)
-}

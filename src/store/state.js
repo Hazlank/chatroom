@@ -2,7 +2,7 @@ import { userlist, messagecontent } from './userList'
 
 const state = {
   theme: 'light',
-  barPosition: false,
+  barPosition: 'translateX(-270px)',
   wrapper: false,
   speekingNum: '',
   userList: userlist,

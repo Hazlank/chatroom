@@ -1,11 +1,7 @@
 <template>
   <div class="tg-userlist">
     <slot name="loading" v-if='loading'>loading</slot>
-    <div class="tg-user" v-for="(user,index) in userList" 
-    :class="{'active': speekingNum === index,'font-c': speekingNum !== index}"
-    :key="`username-${user.name}`"
-    @click="speekingNumChange(index)"
-    v-if="filterUser(user.name)">
+    <div class="tg-user" v-for="(user,index) in userList" :class="{'active': speekingNum === index,'font-c': speekingNum !== index}"  @click="speekingNumChange(index)"  :key="`username-${user.name}`">
       <div class="tg-user__avatar">
         <img :src="user.avatar" alt="头像">
       </div>
@@ -18,8 +14,8 @@
         </div>
         <div class="tg-block__footer">
           <span class="tg-block__talkname">
-            {{ user.messagecontent[user.messagecontent.length - 1].speaker ? 'You' : user.name | filterSpace }}
-          </span><span class="tg-block__point">:</span>
+            {{ user.messagecontent[user.messagecontent.length - 1].speaker ? 'You' : user.name }}:
+          </span>
           <span class="tg-block__context">{{user.context}}</span>
           <span v-if="user.unread === 0" class="tg-block__contextcount">{{user.unread}}</span>
         </div>
@@ -28,29 +24,18 @@
   </div>
 </template>
 <script>
-  import pyfl from 'pyfl'
   import { mapGetters, mapActions } from 'vuex'
   export default {
-    props: ['searchUser'],
     data () {
       return {
         loading: false
       }
     },
     methods: {
-      filterUser (name) {
-        var reg = new RegExp(`^${this.searchUser}|\\s${this.searchUser}`, 'i')
-        return new RegExp(/[\u4e00-\u9fa5]/g).test(this.searchUser) ? reg.test(name) : reg.test(pyfl(name))
-      },
       ...mapActions(['speekingNumChange'])
     },
     computed: {
       ...mapGetters(['speekingNum', 'userList'])
-    },
-    filters: {
-      filterSpace (str) {
-        return str.split(' ')[0]
-      }
     }
   }
 </script>
