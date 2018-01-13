@@ -48,7 +48,7 @@ export const userlist = [{
 },
 {
   avatar: `/static/img/avatar6.jpg`,
-  name: `pick`,
+  name: `扑街r v发`,
   type: 'group',
   context: '',
   unread: 200,
@@ -64,7 +64,7 @@ export const userlist = [{
 },
 {
   avatar: `/static/img/avatar8.jpg`,
-  name: `tinghao`,
+  name: `rollup`,
   type: 'group',
   context: '',
   unread: 200,
@@ -88,7 +88,7 @@ export const userlist = [{
 },
 {
   avatar: `/static/img/avatar11.jpg`,
-  name: `ruanyifeng`,
+  name: `阮一峰`,
   type: 'group',
   context: '',
   unread: 200,
