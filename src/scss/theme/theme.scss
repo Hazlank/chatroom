@@ -93,7 +93,7 @@ $basic-background-color:
         &:hover{
           background: map-get($map, sidebar-memu-background);
         }
-        .tg-block__talkname{
+        .tg-block__talkname,.tg-block__point{
           color: map-get($map, font-color);
         }
       }
