@@ -14,7 +14,8 @@ $themes: (
         sidebar-memu-background: $dark-sidebar-memu-background,
         sidebar-bookmark: $dark-sidebar-bookmark-background,
         sidelist-border: $dark-sidelist-border,
-        sidelist-button-background: $dark-sidelist-button-background
+        sidelist-button-background: $dark-sidelist-button-background,
+        box-button-hover:$dark-box-button-hover
     ),
   light: (
         basic-font-color: $light-basic-font-color,
@@ -26,7 +27,8 @@ $themes: (
         sidebar-memu-background: $light-sidebar-memu-background,
         sidebar-bookmark: $light-sidebar-bookmark-background,
         sidelist-border: $light-sidelist-border,
-        sidelist-button-background: $light-sidelist-button-background
+        sidelist-button-background: $light-sidelist-button-background,
+        box-button-hover:$light-box-button-hover
     ),
 );
 
@@ -101,8 +103,30 @@ $basic-background-color:
     @include b(search-input){
       background: map-get($map, sidelist-button-background);
     }
+    
+    //box
+    @include b(box){
+      &__container{
+        background: map-get($map, basic-background-color);
+      }    
+      &__button{
+        button{
+          color: map-get($map, font-color);
+          &:hover{
+            background: map-get($map, box-button-hover)!important;
+          }
+        }
+      }
+    }
 
-   
+  .is-focus{
+    label{
+      color: map-get($map, font-color);
+    }
+    input{
+      border-bottom: 2px solid map-get($map, font-color);;
+    }
+   } 
    //重复样式
    //
   #{$theme}-basic-font-color{
