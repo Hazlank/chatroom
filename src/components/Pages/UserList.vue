@@ -31,6 +31,7 @@
   import pyfl from 'pyfl'
   import { mapGetters, mapActions } from 'vuex'
   export default {
+    name: 'userlist',
     props: ['searchUser'],
     data () {
       return {

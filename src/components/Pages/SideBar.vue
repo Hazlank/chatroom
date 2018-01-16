@@ -1,6 +1,6 @@
 <template>
   <transition name='sidebar'>
-    <div class="tg-side-bar"  v-if="barPosition" @click="bardisply">
+    <div class="tg-side-bar"  v-if="barPosition" @click="barDisply">
       <div class="tg-sidebar">
         <div class="tg-sidebar__infor">
           <div class="tg-sidebar__avatar">
@@ -12,7 +12,7 @@
           </div>
         </div>
         <ul class="tg-sidebar-toolsList">
-          <li class="tg-sidebar-toolsList__memu tg-icon" v-for="(data, index) in memus" :key="index" @click="stopPropagation(index,$event)">
+          <li class="tg-sidebar-toolsList__memu tg-icon" v-for="(data, index) in memus" :key="index" @click="stopPropagation(index,$event,data)">
             <i class="iconfont" :class="data.icon"></i>
             <a>{{data.context}}</a>
             <div class="theme-buttonContain"  v-if="data.icon === 'icon-yueliang'">
@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-  </div>
+   </div>
   </transition>
 </template>
 <script>
@@ -37,6 +37,7 @@
     mapActions
   } from 'Vuex'
   export default {
+    name: 'sidebar',
     data () {
       return {
         userinfo: {
@@ -45,18 +46,23 @@
         },
         memus: [{
           context: 'New Group',
+          type: 'Group',
           icon: 'icon-qunliao'
         }, {
           context: 'New Channel',
+          type: 'Channel',
           icon: 'icon-guangbo'
         }, {
           context: 'Contacts',
+          type: 'Contact',
           icon: 'icon-lianxiren'
         }, {
           context: 'Calls',
+          type: 'Call',
           icon: 'icon-dianhua'
         }, {
           context: 'Settings',
+          type: 'Setting',
           icon: 'icon-shezhi'
         }, {
           context: 'Night Mode',
@@ -65,12 +71,15 @@
       }
     },
     methods: {
-      ...mapActions(['bardisply', 'themechange']),
-      stopPropagation (index, e) {
+      ...mapActions(['barDisply', 'themeChange', 'boxDisplay', 'boxType']),
+      stopPropagation (index, e, data) {
         if (index === 5) {
           e.stopPropagation()
-          this.themechange()
+          this.themeChange()
           this.ButtonType = this.ButtonType === 'button-light' ? 'button-dark' : 'button-light'
+        } else {
+          this.boxDisplay()
+          this.boxType(`Box${data.type}`)
         }
       }
     },
