@@ -1,4 +1,64 @@
+@include when(focus){
+    input{
+        height: 20px!important;
+    }
+}
+
 @include b(box){
-    height: 50px;
-    width: 200px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include e(container){
+        width: 500px;
+        height: 100px;
+        background: red;
+    }
+    @include e(button){
+        button{
+            outline: none;
+            padding: 8px 13px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            background: inherit;
+            font-size: 14px;
+        }
+    }
+    @include e(input){
+        cursor:text;
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        justify-content: flex-end;
+        label{
+            cursor: inherit;
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: #ccc;
+        }
+        input{
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            height: 0;
+            outline: none;
+        }
+    }
+    @include e(group){
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+    @include e(groupBottom){
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
 }
