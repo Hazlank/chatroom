@@ -1,13 +1,13 @@
 const actions = {
-  bardisply ({ commit }) {
-    commit('bardisply')
-    commit('wrapperdisply')
+  barDisply ({ commit }) {
+    commit('barDisply')
+    commit('wrapperDisply')
   },
-  wrapperdisply ({ commit }) {
-    commit('wrapperdisply')
+  wrapperDisply ({ commit }) {
+    commit('wrapperDisply')
   },
-  themechange ({ commit }) {
-    commit('themechange')
+  themeChange ({ commit }) {
+    commit('themeChange')
   },
   speekingNumChange ({ commit }, num) {
     commit('speekingNumChange', num)
@@ -18,6 +18,13 @@ const actions = {
   },
   scrollRemove ({ commit }, e) {
     commit('scrollRemove', e)
+  },
+  boxDisplay ({ commit }) {
+    commit('boxDisplay')
+    commit('wrapperDisply')
+  },
+  boxType ({ commit }, type) {
+    commit('boxType', type)
   }
 }
 

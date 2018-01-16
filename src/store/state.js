@@ -4,9 +4,11 @@ const state = {
   theme: 'light',
   barPosition: false,
   wrapper: false,
+  box: false,
   speekingNum: '',
   userList: userlist,
-  messagecontent: messagecontent
+  messagecontent: messagecontent,
+  boxType: ''
 }
 
 export default state

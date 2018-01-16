@@ -1,11 +1,11 @@
 const mutations = {
-  bardisply: state => {
+  barDisply: state => {
     state.barPosition = !state.barPosition
   },
-  wrapperdisply: state => {
+  wrapperDisply: state => {
     state.wrapper = !state.wrapper
   },
-  themechange: state => {
+  themeChange: state => {
     state.theme = state.theme === 'dark' ? 'light' : 'dark'
   },
   speekingNumChange: (state, num) => {
@@ -22,6 +22,12 @@ const mutations = {
   },
   scrollRemove: (state, e) => {
     e.parentElement.scrollTop = e.offsetHeight - e.parentElement.offsetHeight
+  },
+  boxDisplay: state => {
+    state.box = !state.box
+  },
+  boxType: (state, type) => {
+    state.boxType = type
   }
 }
 
