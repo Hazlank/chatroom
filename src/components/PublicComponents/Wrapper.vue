@@ -1,5 +1,5 @@
 <template>
-  <div class="tg-wrapper" v-if="wrapper" @click='bardisply'>
+  <div class="tg-wrapper" v-if="wrapper" @click='barDisply'>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
     ...mapGetters(['wrapper'])
   },
   methods: {
-    ...mapActions(['bardisply'])
+    ...mapActions(['barDisply'])
   }
 }
 </script>
