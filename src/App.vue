@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme()">
+  <div :class="theme">
     <header is='headerCompontent'></header>
     <div class="tg-main">
       <side-list></side-list>
@@ -8,6 +8,7 @@
       <Wrapper>
       </Wrapper>
       <side-bar></side-bar>
+      <box></box> 
   </div>
 </template>
 
@@ -21,10 +22,8 @@
   import Box from 'Public/Box'
   export default {
     name: 'app',
-    data () {
-      return {
-        ...mapGetters(['theme'])
-      }
+    computed: {
+      ...mapGetters(['theme'])
     },
     components: {
       HeaderCompontent: Header,
