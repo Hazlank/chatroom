@@ -8,7 +8,8 @@ const state = {
   speekingNum: '',
   userList: userlist,
   messagecontent: messagecontent,
-  boxType: ''
+  boxType: '',
+  searchDelete: false
 }
 
 export default state

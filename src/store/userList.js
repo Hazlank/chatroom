@@ -1,110 +1,126 @@
 export const userlist = [{
-  avatar: `/static/img/avatar0.jpg`,
-  name: `hax`,
+  avatar: '/static/img/avatar0.jpg',
+  name: 'hax',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar1.jpg`,
-  name: `nbsaw`,
+  avatar: '/static/img/avatar1.jpg',
+  name: 'nbsaw',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar2.jpg`,
-  name: `lialuo`,
+  avatar: '/static/img/avatar2.jpg',
+  name: 'lialuo',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar3.jpg`,
-  name: `vipcch`,
+  avatar: '/static/img/avatar3.jpg',
+  name: 'vipcch',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar4.jpg`,
-  name: `choltte`,
+  avatar: '/static/img/avatar4.jpg',
+  name: 'choltte',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar5.jpg`,
-  name: `gwell`,
+  avatar: '/static/img/avatar5.jpg',
+  name: 'gwell',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar6.jpg`,
-  name: `扑街r v发`,
+  avatar: '/static/img/avatar6.jpg',
+  name: '扑街r v发',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar7.jpg`,
-  name: `haozi`,
+  avatar: '/static/img/avatar7.jpg',
+  name: 'haozi',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar8.jpg`,
-  name: `rollup`,
+  avatar: '/static/img/avatar8.jpg',
+  name: 'rollup',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar9.jpg`,
-  name: `tj`,
+  avatar: '/static/img/avatar9.jpg',
+  name: 'tj',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar10.jpg`,
-  name: `Evan you`,
+  avatar: '/static/img/avatar10.jpg',
+  name: 'Evan you',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar11.jpg`,
-  name: `阮一峰`,
+  avatar: '/static/img/avatar11.jpg',
+  name: '阮一峰',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar12.jpg`,
-  name: `Addy Osmani`,
+  avatar: '/static/img/avatar12.jpg',
+  name: 'Addy Osmani',
   type: 'group',
   context: '',
   unread: 200,
   lasttime: '12:15'
 },
 {
-  avatar: `/static/img/avatar13.jpg`,
-  name: `fimars`,
+  avatar: '/static/img/avatar13.jpg',
+  name: 'fimars',
+  type: 'group',
+  context: '',
+  unread: 200,
+  lasttime: '12:15'
+},
+{
+  avatar: '/static/img/avatar14.jpg',
+  name: 'Jamie Kyle',
+  type: 'group',
+  context: '',
+  unread: 200,
+  lasttime: '12:15'
+},
+{
+  avatar: '/static/img/avatar15.jpg',
+  name: 'Mike Bostock',
   type: 'group',
   context: '',
   unread: 200,

@@ -25,6 +25,9 @@ const actions = {
   },
   boxType ({ commit }, type) {
     commit('boxType', type)
+  },
+  searchAnimation ({ commit }) {
+    commit('searchAnimation')
   }
 }
 

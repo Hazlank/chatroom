@@ -28,6 +28,9 @@ const mutations = {
   },
   boxType: (state, type) => {
     state.boxType = type
+  },
+  searchAnimation: state => {
+    state.searchDelete = !state.searchDelete
   }
 }
 
