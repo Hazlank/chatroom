@@ -3,27 +3,22 @@
 import Vue from 'vue'
 import App from '@/App.vue'
 import store from '@/store'
+import BoxInput from 'Public/BoxInput'
+import BoxButton from 'Public/BoxButton'
+import BoxUploadimg from 'Public/BoxUploadimg'
 
 import 'normalize.css'
 import 'Scss/main.scss'
 
 Vue.config.productionTip = false
 
-Vue.directive('demo', {
-  bind: function (a, b, c) {
-    console.log(a, b, c)
-    // this.handler = function () {
-    //   console.log(this)
-    //   this.set(this.el.innerHTML)
-    // }.bind(this)
-    // this.el.addEventListener('input', this.handler)
-  },
-  update: function (newValue, oldValue) {
-    this.el.innerHTML = newValue || ''
-  },
-  unbind: function () {
-    this.el.removeEventListener('input', this.handler)
-  }
+const components = [
+  BoxInput,
+  BoxButton,
+  BoxUploadimg
+]
+components.forEach(component => {
+  Vue.component(component.name, component)
 })
 
 /* eslint-disable no-new */
