@@ -10,28 +10,45 @@
             width: 260px;
             background: white;
             padding-top: 10px;
+            padding-bottom: 10px;
+            z-index: 1;
+        }
+        @include e(searchDelete){
+            position: absolute;
+            padding: 2px 15px;
+            font-size: 18px;
+            color: #A7A7A7;
+            display: inline-block;
+            font-size: 13px;
+            color: #999;
+            font-weight: 600;
+            top: 17px;
+            right: 8px;
+            padding-right: 11px;
+            transition: all 0.16s;
+            transform: rotate(-90deg);
         }
         @include b(sidelist-tools) {
             display: inline-block;
+            i{
+                padding: 2px 15px;
+                font-size: 20px;
+                color: #999;
+                display: inline-block;
+            }
         }
         @include b(sidelist-search) {
             display: inline-block;
         }
-        & i {
-            padding: 2px 15px;
-            font-size: 20px;
-            color: #999;
-            display: inline-block;
-        }
         @include b(search-input){
-            width: 174px;
+            width: 161px;
             height: 19px;
             font-size: 12px;
             padding: 5px 8px;
             border-radius: 5px;
             border: none;
+            padding-right: 25px;
         }
-    
     }  
 }
 

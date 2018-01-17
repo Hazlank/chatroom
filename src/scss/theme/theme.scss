@@ -38,14 +38,20 @@ $basic-font-color:
   'user',
   'search-input',
   'message-container',
-  'message-textarea';
+  'message-textarea',
+  'message__header',
+  'box__container',
+  'box__input input';
 
 //
 $basic-background-color:
   'side-bar',
   'sidelist',
   'sidelist__header',
-  'message-textarea';
+  'message-textarea',
+  'message__header',
+  'box__container',
+  'box__input input';
 
 
 @each $theme, $map in $themes {
@@ -80,7 +86,7 @@ $basic-background-color:
     //sidelist
     @include b(sidelist){
       //侧栏右侧border
-      border: map-get($map, sidelist-border);
+      border-right: map-get($map, sidelist-border);
     }
 
      //userlist
@@ -106,9 +112,6 @@ $basic-background-color:
     
     //box
     @include b(box){
-      &__container{
-        background: map-get($map, basic-background-color);
-      }    
       &__button{
         button{
           color: map-get($map, font-color);
@@ -116,6 +119,9 @@ $basic-background-color:
             background: map-get($map, box-button-hover)!important;
           }
         }
+      }
+      @include b(uploadimg){
+        background: map-get($map, sidebar-information-background);
       }
     }
 

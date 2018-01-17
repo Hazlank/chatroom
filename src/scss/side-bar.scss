@@ -5,6 +5,7 @@
     transition: all 0.23s;
     background: white;
     height: calc(100% - 20px);
+    z-index: 3;
     @include b(sidebar) {
         @include e(infor) {
             height: 95px;

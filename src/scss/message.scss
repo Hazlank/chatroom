@@ -2,8 +2,8 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    width: calc(100% - 261px);
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
@@ -12,6 +12,27 @@
         i {
             font-size: 30px
         }
+    }
+    @include e(container){
+        width: calc(100% - 261px);
+        display: flex;
+        flex-direction: column;
+    }
+    @include e(header){
+        position: fixed;
+        background: white;
+        width: 100%;
+        padding: 8px 17px;
+    }
+    @include e(headerUsername){
+        font-weight: 600;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+    @include e(headerLasttime){
+        font-size: 13px;
+        color: #999;
+        margin-top: 5px;
     }
     @include b(message-textarea) {
         display: flex;
