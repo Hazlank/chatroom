@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
   import Header from 'Pages/Header'
   import SideList from 'Pages/SideList'
   import SideBar from 'Pages/SideBar'
@@ -22,6 +22,9 @@
   import Box from 'Public/Box'
   export default {
     name: 'app',
+    methods: {
+      ...mapActions(['boxDisplay'])
+    },
     computed: {
       ...mapGetters(['theme'])
     },
