@@ -29,3 +29,18 @@ body{
 .sidebar-enter,.sidebar-leave-active{
   transform: translateX(-270px)
 }
+
+.box-enter .tg-box__container{
+  right: -100px;
+  opacity: 0;
+}
+
+.box-leave-active .tg-box__container{
+  opacity: 0;
+}
+
+.searchIcon-enter,.searchIcon-leave-active{
+  transform: rotate(-45deg);
+  opacity: 0;
+  font-size: 12px;
+}
