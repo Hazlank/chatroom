@@ -7,6 +7,9 @@
       <div class="tg-sidelist-search">
         <div class="tg-sidelist-search__input">
            <input type="text" placeholder="Search" class="tg-search-input" v-model="searchUser">
+           <transition name='searchIcon'>
+              <i @click="deleteText" v-if='searchDelete' class="iconfont icon-cuo1 tg-sidelist__searchDelete"></i>
+            </transition> 
         </div>
       </div>
     </div>
@@ -20,7 +23,7 @@
 
 <script>
   import userList from 'Pages/UserList'
-  import { mapActions } from 'vuex'
+  import { mapActions, mapState } from 'vuex'
   export default {
     name: 'sidelist',
     data () {
@@ -28,11 +31,26 @@
         searchUser: ''
       }
     },
+    computed: mapState(['searchDelete']),
     methods: {
-      ...mapActions(['barDisply'])
+      deleteText () {
+        this.searchUser = ''
+      },
+      ...mapActions(['barDisply', 'searchAnimation'])
     },
     components: {
       userList
+    },
+    watch: {
+      searchUser (str) {
+        if (str) {
+          if (!this.searchDelete) {
+            this.searchAnimation()
+          }
+        } else {
+          this.searchAnimation()
+        }
+      }
     }
   }
 </script>

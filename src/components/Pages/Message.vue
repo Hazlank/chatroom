@@ -1,7 +1,13 @@
 <template>
-  <div class="tg-message" :style="{'background-image':background}">
-    <!-- <div class="tg-message-header">
-            </div> -->
+  <div class="tg-message__container">
+    <div class="tg-message__header"  v-if="userInfor" >
+      <div>
+        <div class="tg-message__headerUsername">{{ userInfor ? userInfor.name : '' }}</div>
+        <div class="tg-message__headerLasttime">last seen a long time ago</div>
+      </div>
+      <div></div>
+    </div>
+    <div class="tg-message" :style="{'background-image':background}">
     <div style="flex: 1;overflow: auto;"  ref="parent">
           <div class="tg-message-content" ref="children">
           <div v-for="(content,keys) in messagecontent" :key="`content-${keys}`"
@@ -21,7 +27,7 @@
           </div>
         </div>
     </div>
-    <div class="tg-message-textarea">
+    <div class="tg-message-textarea" v-if="userInfor">
       <span class="tg-icon">
          <i class="iconfont icon-huixingzhen"></i>
       </span>
@@ -36,6 +42,7 @@
         </span>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -73,7 +80,7 @@
       messageImg () {
         return this.background
       },
-      ...mapGetters(['messagecontent'])
+      ...mapGetters(['messagecontent', 'userInfor'])
     }
   }
 </script>
