@@ -1,23 +1,18 @@
 <template>
-  <div class="tg-box__input" @click="Infocus" :class="{'is-focus':focusState}">
-    <label>{{ text }}</label>
+  <div class="tg-box__input"  @click="Infocus" :class="{'is-focus':focusState}">
+    <label >{{ text }}</label>
     <input ref='input' type="text" @blur="InputFocus" @focus="InputFocus" v-model="value">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'boxinput',
+  name: 'BoxInput',
   props: ['text'],
   data () {
     return {
       value: '',
       focusState: false
-    }
-  },
-  filters: {
-    toUpperCase (str) {
-      return str.toUpperCase()
     }
   },
   methods: {
