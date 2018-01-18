@@ -1,3 +1,6 @@
+
+<p align="center"><a href="https://hazlank.github.com/chatroom" target="_blank"><img width="100"src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516878947&di=db7ccc4ed4c4789149abebe5e7051986&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.25pp.com%2Fuploadfile%2Fapp%2Ficon%2F20150924%2F1443042361590657.jpg"></a></p>
+
 # chartroom
 
 > 界面仿telegram的聊天室
