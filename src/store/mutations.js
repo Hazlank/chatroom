@@ -16,8 +16,8 @@ const mutations = {
   },
   updateUsertalk: state => {
     state.userList.forEach((list, index) => {
-      var contentIetm = list.messagecontent
-      list['context'] = contentIetm[contentIetm.length - 1].text
+      var contextItem = list.messagecontent.contextItem
+      list['context'] = contextItem[contextItem.length - 1].text
     })
   },
   scrollRemove: (state, e) => {
