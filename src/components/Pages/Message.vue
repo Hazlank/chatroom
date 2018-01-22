@@ -56,7 +56,7 @@
     },
     data () {
       return {
-        background: 'url(/static/img/wife.jpg)'
+        background: 'url(./static/img/wife.jpg)'
       }
     },
     methods: {
@@ -68,13 +68,14 @@
         })
         this.$refs['edit'].innerHTML = ''
         this.updateLocalStorage()
+        this.updateUsertalk()
         this.scroll()
       },
       async scroll () {
         await this.$nextTick()
         this.scrollRemove(this.$refs['children'])
       },
-      ...mapActions(['updateLocalStorage', 'scrollRemove'])
+      ...mapActions(['updateLocalStorage', 'scrollRemove', 'updateUsertalk'])
     },
     computed: {
       messageImg () {
