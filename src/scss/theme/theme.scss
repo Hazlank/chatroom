@@ -97,12 +97,20 @@ $basic-background-color:
       }
     }
     //侧栏用户列表hover背景颜色,字体颜色
-      .font-c{
+      @include b(user){
         &:hover{
           background: map-get($map, sidebar-memu-background);
         }
         .tg-block__talkname,.tg-block__point{
           color: map-get($map, font-color);
+        }
+      }
+      .active{
+        &:hover{
+          background: map-get($map, sidebar-information-background);
+        }
+        .tg-block__talkname,.tg-block__point{
+          color: white;
         }
       }
     //侧栏用户列表按钮背景颜色
