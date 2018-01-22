@@ -56,7 +56,7 @@
     },
     data () {
       return {
-        background: 'url(./static/img/wife.jpg)'
+        background: 'url(http://p2yjpxkib.bkt.clouddn.com/wife.jpg)'
       }
     },
     methods: {
