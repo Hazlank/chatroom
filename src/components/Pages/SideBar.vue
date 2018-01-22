@@ -4,7 +4,7 @@
       <div class="tg-sidebar">
         <div class="tg-sidebar__infor">
           <div class="tg-sidebar__avatar">
-            <img src="static/img/7753609_p0.jpg" alt="头像">
+            <img :src='avatar' alt="头像">
           </div>
           <div class="tg-sidebar__item">
             <span class="tg-sidebar__name">{{userinfo.username}}</span>
@@ -40,6 +40,7 @@
     name: 'sidebar',
     data () {
       return {
+        avatar: './static/img/7753609_p0.jpg',
         userinfo: {
           username: 'hazlank',
           userphone: '13265846123'
