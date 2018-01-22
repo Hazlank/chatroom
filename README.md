@@ -16,4 +16,4 @@ demo项目，顺便有一些想实现的功能
 - [ ] 很酷的h5 API(notification)
 
 ## 后期
-套个electron做桌面端,emmmm,大部分功能需要后台来做,也不会其他语言，到时候来拿node做server吧
+基本的功能都实现过,这次把想法都拼接起来,再套个electron做桌面端,emmmm,大部分功能需要后台来做,也不会其他语言，到时候来拿node做server吧
