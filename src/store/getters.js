@@ -16,7 +16,7 @@ const getters = {
   },
   messagecontent: state => {
     const list = state.userList
-    return [].concat(list.map((d, _) => d.messagecontent))[state.speekingNum]
+    return [].concat(list.map((d, _) => d.messagecontent.contextItem))[state.speekingNum]
   },
   box: state => {
     return state.box
