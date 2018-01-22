@@ -12,9 +12,11 @@ const actions = {
   speekingNumChange ({ commit }, num) {
     commit('speekingNumChange', num)
   },
+  updateUsertalk ({ commit }) {
+    commit('updateUsertalk')
+  },
   updateLocalStorage ({ commit }) {
     commit('updateLocalStorage')
-    commit('updateUsertalk')
   },
   scrollRemove ({ commit }, e) {
     commit('scrollRemove', e)
