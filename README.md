@@ -3,7 +3,7 @@
 
 # chartroom
 
-> 界面仿telegram的聊天室
+> 界面仿telegram的聊天室(vue+vuex)
 
 ## 介绍
 demo项目，顺便有一些想实现的功能
